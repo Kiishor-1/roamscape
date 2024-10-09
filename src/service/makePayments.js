@@ -51,19 +51,16 @@ export async function payForBookings(
         });
 
         const responseText = await response.text(); // Get raw response text
-        console.log("response text ", responseText); // Log the response for debugging
 
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}, message: ${responseText}`);
         }
 
         const data = JSON.parse(responseText); // Parse it as JSON
-        console.log("data", data);
 
         const { orderId, amount, currency } = data;
 
         const razrpay_key = import.meta.env.VITE_REACT_APP_RAZORPAY_KEY_ID;
-        console.log("razorpay key from env:", razrpay_key); // Log the key to check its value
 
         const options = {
             key: razrpay_key, // Pass the Razorpay key

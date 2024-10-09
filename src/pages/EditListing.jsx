@@ -110,7 +110,7 @@ const EditListing = () => {
         geometry, // Update geometry
       };
 
-      console.log("updated listing",updatedListing)
+      // console.log("updated listing",updatedListing)
 
       // Dispatch the action
       const result = await dispatch(editListing({ id, updatedListing })).unwrap();

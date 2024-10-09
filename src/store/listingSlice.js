@@ -48,7 +48,7 @@ export const createListing = createAsyncThunk(
                 },
             });
             toast.success('Listing created successfully!');
-            console.log(response.data);
+            // console.log(response.data);
             return response.data;
         } catch (error) {
             toast.error(error.response?.data?.message || 'Server error');

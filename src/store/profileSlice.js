@@ -78,8 +78,7 @@ export const createBooking = createAsyncThunk(
             return rejectWithValue('Token not found'); // Handle missing token
         }
 
-        // console.log("currUser", currUser);
-        console.log("data", bookingData);
+
         try {
             const response = await axios.post(CREATE_BOOKING(bookingData.listingId), bookingData, {
                 headers: {

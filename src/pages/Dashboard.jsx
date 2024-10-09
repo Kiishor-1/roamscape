@@ -92,7 +92,7 @@ const Dashboard = () => {
         <div className="min-h-screen bg--100 p-4">
             <div className="container mx-auto">
                 {/* Dashboard Heading */}
-                <h1 className="text-3xl font-bold text-gray-800 mb-8">Hello👋, {user?.firstName || user.username || user.email || "User"}</h1>
+                <h1 className="text-3xl font-bold text-gray-800 mb-8">Hello👋, {user?.firstName || user?.username || user?.email || "User"}</h1>
 
                 {/* Profile Section */}
                 <div className="p-6 mb-8">

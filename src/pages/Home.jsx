@@ -12,7 +12,7 @@ const Home = ({ search }) => {
     const [tax,setTax] = useState(false);
     const {currUser} = useSelector((state)=>state.user)
 
-    console.log(currUser)
+    // console.log(currUser)
 
     const handleTaxChange = ()=>{
         setTax(!tax);

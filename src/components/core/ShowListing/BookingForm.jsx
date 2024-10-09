@@ -36,7 +36,7 @@ const BookingForm = ({ listing, guests, onGuestChange, totalPrice, isBooked, set
       dispatch(deleteBooking({ listingId: listing?._id?.$oid || listing?._id }))
         .unwrap()
         .then((response) => {
-          console.log("Unbooking successful: ", response);
+          console.log("Unbooking successful ");
           setIsBooked(false);
         })
         .catch((error) => {
@@ -54,7 +54,7 @@ const BookingForm = ({ listing, guests, onGuestChange, totalPrice, isBooked, set
       dispatch(createBooking({ bookingData }))
         .unwrap()
         .then((response) => {
-          console.log("Booking successful: ", response);
+          console.log("Booking successful ");
           setIsBooked(true);
         })
         .catch((error) => {
@@ -80,7 +80,7 @@ const BookingForm = ({ listing, guests, onGuestChange, totalPrice, isBooked, set
       };
 
       const bookingResponse = await dispatch(createBooking({ bookingData })).unwrap();
-      console.log("booking response", bookingResponse)
+      // console.log("booking response", bookingResponse)
 
       // Step 2: Check if booking creation is successful
       if (bookingResponse && bookingResponse.bookingId) {
