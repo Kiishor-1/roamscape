@@ -32,6 +32,8 @@ const ShowListing = () => {
         }
     }, [dispatch, currUser]);
 
+    console.log("listing", listing);
+
     useEffect(() => {
         if (listing && bookings) {
             const currentBooking = bookings.find((booking) => 

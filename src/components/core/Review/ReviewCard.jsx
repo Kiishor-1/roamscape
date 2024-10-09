@@ -14,9 +14,10 @@ const ReviewCard = ({ review }) => {
         <div className="bg-white shadow-md rounded-lg p-4 transition transform hover:scale-105">
             <div className="flex items-center mb-4">
                 <img
-                    src={`https://ui-avatars.com/api/?name=${review.user.username || "User"}`}
-                    alt={review.user.name}
+                    src={`https://ui-avatars.com/api/?name=${review.user.firstName+" "+review.user?.lastName || "User"}`}
+                    alt={review.user?.firstName}
                     className="w-12 h-12 rounded-full border-2 border-gray-300 mr-4"
+                    title={`${review?.user?.firstName} ${review?.user?.lastName}`}
                 />
                 <div>
                     <h3 className="font-semibold text-lg">{review.user.name}</h3>
