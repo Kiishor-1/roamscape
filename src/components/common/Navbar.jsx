@@ -41,7 +41,7 @@ export default function Navbar({ setSearch }) { // Accept setSearch as a prop
   };
 
   return (
-    <div className="flex lg:flex-row flex-col lg:items-center justify-between py-2 sticky top-0 z-[5] bg-white shadow-md px-4 lg:px-8">
+    <div className="flex lg:flex-row flex-col lg:items-center justify-between py-2 sticky top-0 z-[5] bg-white shadow-md sm:px-4 lg:px-8">
       <Link to={'/'} onClick={() => setSearch("")}>
         <img src={Logo2} className="w-20" alt="logo" />
       </Link>
