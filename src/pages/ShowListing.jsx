@@ -32,7 +32,7 @@ const ShowListing = () => {
         }
     }, [dispatch, currUser]);
 
-    console.log("listing", listing);
+    // console.log("listing", listing);
 
     useEffect(() => {
         if (listing && bookings) {
