@@ -19,7 +19,7 @@ const Dashboard = () => {
     const [totalRent, setTotalRent] = useState(0); // State to store the total rent
 
     const { currUser, token } = useSelector((state) => state.user); // Assuming auth stores userId
-    const userId = currUser.userId;
+    const userId = currUser?.userId;
 
 
     useEffect(() => {
