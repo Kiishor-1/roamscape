@@ -42,16 +42,16 @@ const Login = () => {
     };
 
     return (
-        <div className="flex relative justify-center items-center min-h-screen bg-gray-100">
-            <Link className='' to={"/"}>
+        <div className="flex flex-col relative justify-center items-center h-screen md:bg-gray-100 bg-white">
+            <Link className='md:absolute sticky top-0 md:bg-transparent bg-white w-full self-start' to={"/"}>
                 <img
                     src={Logo}
                     alt="Logo"
-                    className='absolute top-4 left-4 w-24'
+                    className='w-24'
                 />
             </Link>
-            <div className="flex flex-col md:flex-row items-center bg-white py-8 md:rounded-lg md:h-[fit-content] h-screen max-w-6xl">
-                <div className="md:w-1/2 mb-6 md:mb-0 md:mt-0 mt-4 flex flex-col items-center ">
+            <div className="flex flex-col justify-around md:flex-row items-center bg-whit md:rounded-lg md:h-[fit-content] h-[100%] bg-white max-w-6xl">
+                <div className="md:w-1/2 md:mb-0 md:mt-0 mt- flex flex-col items-center ">
                     <img
                         src={LoginLogo}
                         alt="Online Education"
@@ -59,8 +59,8 @@ const Login = () => {
                         loading='lazy'
                     />
                 </div>
-                <div className="md:w-1/2  rounded-md md:p-12 p-4 w-ful">
-                    <h2 className="text-2xl font-semibold text-center mb-6">Welcome</h2>
+                <div className="md:w-1/2  rounded-md md:p-12 px-4 py-2 w-ful">
+                    <h2 className="text-2xl font-semibold text-center mb-6 text-gray-700">Welcome</h2>
                     <form onSubmit={handleLogin} className="space-y-4">
                         <div>
                             <label className="block text-gray-700">Username</label>
@@ -90,7 +90,7 @@ const Login = () => {
                     </form>
                     <div className="flex items-center my-4">
                         <hr className="flex-grow border-gray-300" />
-                        <span className="mx-4 text-gray-500">OR</span>
+                        <span className="mx-4 text-gray-600">OR</span>
                         <hr className="flex-grow border-gray-300" />
                     </div>
                     <div className="flex justify-center space-x-4">
@@ -104,7 +104,7 @@ const Login = () => {
                             <FaTwitter />
                         </button>
                     </div>
-                    <p className="text-center mt-4">
+                    <p className="text-center text-gray-700 mt-4">
                         {`Don't have an account?`}{' '}
                         <Link to="/signup" className="text-indigo-600 hover:underline">
                             Signup

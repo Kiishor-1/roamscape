@@ -64,7 +64,7 @@ const Signup = () => {
                     className='w-24'
                 />
             </Link>
-            <div className="flex flex-col md:flex-row items-center bg-white md:px-8 px-4 py-4  rounded-lg shadow-lg md:h-[fit-content] h- max-w-6xl">
+            <div className="flex flex-col md:flex-row items-center bg-white md:px-8 px-4 py-4  rounded-lg shadow-lg md:h-[fit-content h-screen max-w-6xl">
                 <div className="md:w-1/2 mb-6 md:mb-0 md:mt-0 flex flex-col items-center">
                     <img
                         src={Welcome}
