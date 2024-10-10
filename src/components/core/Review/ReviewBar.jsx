@@ -40,7 +40,7 @@ const ReviewBar = ({ reviews }) => {
                                     <span className="font-bold">{5 - index}</span>
                                     <FaStar className="text-yellow-500 ml-1" />
                                 </div>
-                                <div className="relative w-[70%] mx-auto h-2 bg-gray-300 rounded-full">
+                                <div className="relative sm:w-[70%] w-[60%] mx-auto h-2 bg-gray-300 rounded-full">
                                     <div className={`absolute top-0 left-0 h-full bg-yellow-500 rounded-full`} style={{ width: `${percentage}%` }} />
                                 </div>
                                 <p className="flex items-center text-sm">{count} Ratings</p>
