@@ -43,23 +43,23 @@ const Login = () => {
 
     return (
         <div className="flex relative justify-center items-center min-h-screen bg-gray-100">
-            <Link to={"/"}>
+            <Link className='' to={"/"}>
                 <img
                     src={Logo}
                     alt="Logo"
                     className='absolute top-4 left-4 w-24'
                 />
             </Link>
-            <div className="flex flex-col md:flex-row items-center bg-white p-8 rounded-lg shadow-lg max-w-6xl">
-                <div className="md:w-1/2 mb-6 md:mb-0">
+            <div className="flex flex-col md:flex-row items-center bg-white py-8 md:rounded-lg md:h-[fit-content] h-screen max-w-6xl">
+                <div className="md:w-1/2 mb-6 md:mb-0 md:mt-0 mt-4 flex flex-col items-center ">
                     <img
                         src={LoginLogo}
                         alt="Online Education"
-                        className="w-full h-auto p-4"
+                        className="md:w-1/2 w-1/3  h-auto p-4"
                         loading='lazy'
                     />
                 </div>
-                <div className="md:w-1/2 sm:shadow-[0] shadow-md rounded-md p-12 w-full">
+                <div className="md:w-1/2  rounded-md md:p-12 p-4 w-ful">
                     <h2 className="text-2xl font-semibold text-center mb-6">Welcome</h2>
                     <form onSubmit={handleLogin} className="space-y-4">
                         <div>

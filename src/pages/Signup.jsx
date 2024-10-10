@@ -56,16 +56,16 @@ const Signup = () => {
     };
 
     return (
-        <div className="flex relative justify-center items-center min-h-screen bg-gray-100">
-            <Link to={"/"}>
+        <div className="flex flex-col relative justify-center items-center min-h-screen md:bg-gray-100">
+          <Link to={"/"} className='md:absolute sticky top-0 md:bg-transparent bg-white w-full self-start'>
                 <img
                     src={Logo}
                     alt="Logo"
-                    className='absolute top-4 left-4 w-24'
+                    className='w-24'
                 />
             </Link>
-            <div className="flex flex-col md:flex-row items-center bg-white px-8 py-4 rounded-lg shadow-lg max-w-6xl">
-                <div className="md:w-1/2 mb-6 md:mb-0 flex flex-col items-center">
+            <div className="flex flex-col md:flex-row items-center bg-white md:px-8 px-4 py-4  rounded-lg shadow-lg md:h-[fit-content] h- max-w-6xl">
+                <div className="md:w-1/2 mb-6 md:mb-0 md:mt-0 flex flex-col items-center">
                     <img
                         src={Welcome}
                         alt="Online Education"
@@ -97,10 +97,10 @@ const Signup = () => {
                         </div>
                     </div>
                 </div>
-                <div className="md:w-1/2 sm:shadow-[0] shadow-md rounded-md p-12 w-full">
+                <div className="md:w-1/2 rounded-md p-2 w-full">
                     <h2 className="text-2xl font-semibold text-center mb-6">Create Account</h2>
                     <form onSubmit={handleSignup} className="space-y-4">
-                        <div className="flex lg:flex-row flex-col items-center gap-3">
+                        <div className="flex md:flex-row flex-col w-full items-center gap-3">
                             <div className='w-full'>
                                 <label className="block text-gray-700">First Name</label>
                                 <input
@@ -124,7 +124,7 @@ const Signup = () => {
                                 />
                             </div>
                         </div>
-                        <div className="flex lg:flex-row flex-col items-center gap-3">
+                        <div className="flex md:flex-row flex-col items-center gap-3">
                             <div className='w-full'>
                                 <label className="block text-gray-700">Username</label>
                                 <input
