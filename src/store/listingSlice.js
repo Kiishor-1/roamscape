@@ -98,11 +98,12 @@ export const deleteListing = createAsyncThunk(
                     }
                 }
             );
-            if(!response.ok){
+            if(!response.status === 200){
                 return rejectWithValue('Failed to delete listing');
             }
             return id;
         } catch (error) {
+            console.log("Error deleting listing", error);
             toast.error(error.response?.data?.message || 'Failed to delete listing');
             return rejectWithValue(error.response?.data?.message || 'Failed to delete listing');
         }
@@ -231,7 +232,6 @@ const listingSlice = createSlice({
         // Delete Listing
         builder.addCase(deleteListing.pending, (state) => {
             state.status = 'loading';
-            state.isLoading = true;
         })
             .addCase(deleteListing.fulfilled, (state, action) => {
                 state.status = 'succeeded';
@@ -239,13 +239,11 @@ const listingSlice = createSlice({
                 if (state.currentListing && state.currentListing._id.$oid === action.payload) {
                     state.currentListing = null;
                 }
-                state.isLoading = false;
                 toast.success('Listing deleted successfully!');
             })
             .addCase(deleteListing.rejected, (state, action) => {
                 state.status = 'failed';
                 state.error = action.payload || action.error.message;
-                state.isLoading = false;
             });
 
         // Handle search

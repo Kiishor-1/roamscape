@@ -31,7 +31,7 @@ const Dashboard = () => {
         }
     }, [dispatch, userId, navigate, token]);
 
-    // console.log('user',user);
+    console.log('user',user);
 
     useEffect(() => {
         // Calculate total rent of all bookings with status "Booked"
